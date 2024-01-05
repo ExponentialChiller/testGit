@@ -214,19 +214,14 @@
 
 <script>
     $("#pageLink").html("当前页面链接："+ window.location.href);
-    // var bodyHeight = document.body.clientHeight; // 获取 body 可视高度
-    // var bodyScrollHeight = document.body.scrollHeight; // 获取 body 总高度（包括滚动条高度）
-    // console.log('body visible height：' + bodyHeight);
-    // console.log('body height：' + bodyScrollHeight);
-    // var screenWidth = window.screen.width; // 获取屏幕宽度
-    // var screenHeight = window.screen.height; // 获取屏幕高度
-    // alert('the screenHeight is: ' + screenHeight + ' ,screenWidth is: ' + screenWidth);
     var screenWidth = window.screen.width; // 获取屏幕宽度
     var screenHeight = window.screen.height; // 获取屏幕高度
     var devicePixelRatio = window.devicePixelRatio; // 获取设备像素比
     var physicalWidth = screenWidth * devicePixelRatio; // 计算设备物理宽度
     var physicalHeight = screenHeight * devicePixelRatio; // 计算设备物理高度
-    alert('the screenHeight is: ' + physicalHeight + ' ,screenWidth is: ' + physicalWidth);
+    var webviewWidth = window.innerWidth; // 获取 WebView 的宽度
+    var webviewHeight = window.innerHeight; // 获取 WebView 的高度
+    alert('the screenHeight is: ' + physicalHeight + ' ,screenWidth is: ' + physicalWidth + 'the webview width is : ' + webviewWidth + ', webviewHeight: ' + webviewHeight);
 
 	// ---MSDK JS接口 调用示例 START---
     // 生命周期函数，实现同名函数可在游戏回前台时触发
